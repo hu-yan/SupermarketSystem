@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="87.0" prefWidth="346.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Label blendMode="DARKEN" layoutX="14.0" layoutY="14.0" text="管理员邮箱：">
+      <effect>
+        <DropShadow color="#4333ff" />
+      </effect>
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Label layoutX="25.0" layoutY="46.0" prefHeight="27.0" prefWidth="312.0" text="public_yan_webapp@outlook.com">
+      <effect>
+        <ColorAdjust hue="0.015873015873015817" />
+      </effect>
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

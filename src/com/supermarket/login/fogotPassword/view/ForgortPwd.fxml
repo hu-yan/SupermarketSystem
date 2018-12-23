@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="625.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.supermarket.login.fogotPassword.controller.ForgotPwdController">
+  <children>
+    <Label layoutX="72.0" layoutY="75.0" prefHeight="48.0" prefWidth="152.0" text="请输入你的工号">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField id="idTextfield" fx:id="staffNum" layoutX="245.0" layoutY="83.0" onAction="#forgotPwd" prefHeight="33.0" prefWidth="201.0" />
+    <Label font="$x1" layoutX="72.0" layoutY="141.0" prefHeight="48.0" prefWidth="201.0" text="请输入你的手机号" />
+    <Label font="$x1" layoutX="72.0" layoutY="196.0" prefHeight="48.0" prefWidth="113.0" text="新的密码" />
+    <PasswordField id="pwd" fx:id="newPwd" layoutX="245.0" layoutY="203.0" onAction="#forgotPwd" prefHeight="33.0" prefWidth="201.0" />
+    <Label layoutX="237.0" layoutY="24.0" prefHeight="33.0" prefWidth="152.0" text="重置密码">
+      <font>
+        <Font name="System Bold" size="30.0" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="72.0" layoutY="253.0" prefHeight="48.0" prefWidth="113.0" text="再输入一次" />
+    <PasswordField id="pwd" fx:id="newPwdConfirm" layoutX="245.0" layoutY="261.0" onAction="#forgotPwd" prefHeight="33.0" prefWidth="201.0" />
+    <Button layoutX="271.0" layoutY="330.0" mnemonicParsing="false" onMouseClicked="#forgotPwd" prefHeight="39.0" prefWidth="100.0" text="确认">
+      <font>
+        <Font size="22.0" />
+      </font>
+    </Button>
+    <TextField id="idTextfield" fx:id="tele" layoutX="245.0" layoutY="149.0" onAction="#forgotPwd" prefHeight="33.0" prefWidth="201.0" />
+    <Label fx:id="incorrectID" layoutX="459.0" layoutY="77.0" prefHeight="39.0" prefWidth="152.0" text="" textFill="RED">
+      <font>
+        <Font size="14.0" fx:id="x2" />
+      </font>
+    </Label>
+    <Label fx:id="incorrectTele" font="$x2" layoutX="459.0" layoutY="143.0" prefHeight="39.0" prefWidth="152.0" text="" textFill="RED" />
+    <Label fx:id="incorrectPwd" font="$x2" layoutX="459.0" layoutY="258.0" prefHeight="39.0" prefWidth="152.0" text="" textFill="RED" />
+  </children>
+</AnchorPane>

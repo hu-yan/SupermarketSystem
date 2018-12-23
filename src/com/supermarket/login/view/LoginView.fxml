@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.supermarket.login.controller.LoginController">
+  <children>
+    <Label alignment="TOP_LEFT" minHeight="51.0" prefHeight="51.0" prefWidth="600.0" style="-fx-background-color:grey;&#10;-fx-padding: 10px;" text="员工登陆界面">
+      <font>
+        <Font name="System Bold" size="26.0" />
+      </font>
+    </Label>
+    <HBox layoutX="0.0" layoutY="51.0" prefHeight="349.0" prefWidth="146.0" style="-fx-background-color:  #333333&#10;">
+      <children>
+        <GridPane id="GridPane" prefHeight="349.0" prefWidth="146.0">
+          <children>
+            <Label id="forgotPwd" onMouseClicked="#fogortPwd" prefHeight="51.000091552734375" prefWidth="146.0" style="-fx-padding: 30px;" text="忘记密码" textFill="WHITE" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+              <font>
+                <Font size="20.0" fx:id="x2" />
+              </font>
+            </Label>
+            <Label id="contract" font="$x2" onMouseClicked="#contract" prefHeight="51.000091552734375" prefWidth="146.0" style="-fx-padding: 20px;" text="联系管理员" textFill="WHITE" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+          </children>
+          <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          </columnConstraints>
+          <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+        </GridPane>
+      </children>
+    </HBox>
+    <Label layoutX="229.0" layoutY="92.0" prefHeight="59.0" prefWidth="67.0" text="工号">
+      <font>
+        <Font size="26.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="228.0" layoutY="150.0" prefHeight="59.0" prefWidth="66.9998779296875" text="密码" />
+    <TextField id="idTextfield" fx:id="workID" layoutX="302.0" layoutY="105.0" onAction="#confirmLogin" prefHeight="33.0" prefWidth="201.0" />
+    <PasswordField fx:id="pwd" layoutX="302.0" layoutY="164.0" onAction="#confirmLogin" prefHeight="33.0" prefWidth="201.0" />
+    <Button fx:id="loginBtn" font="$x2" layoutX="338.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#confirmLogin" prefWidth="128.0" text="确认登陆" />
+    <Label fx:id="alertLabel" layoutX="229.0" layoutY="286.0" prefHeight="53.0" prefWidth="248.0" text="">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <Label fx:id="error" layoutX="229.0" layoutY="210.0" prefHeight="33.0" prefWidth="274.0" text="" textAlignment="CENTER" textFill="RED">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>

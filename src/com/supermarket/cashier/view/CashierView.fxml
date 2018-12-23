@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="725.0" prefWidth="880.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.supermarket.cashier.controller.CashierController">
+  <children>
+    <AnchorPane id="AnchorPane" layoutX="0.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="881.0000999999975" styleClass="theme">
+      <children>
+        <SplitPane id="splitPaneHorizontal1" dividerPositions="0.2727272727272727" focusTraversable="true" prefHeight="535.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+          <items>
+            <AnchorPane id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <HBox layoutX="0.0" layoutY="0.0" prefHeight="658.0" prefWidth="237.0" style="-fx-background-color:  #333333&#10;" />
+                <GridPane id="GridPane" layoutX="-1.0" layoutY="-1.0" prefHeight="645.0" prefWidth="238.0">
+                  <children>
+                    <Label prefHeight="51.000091552734375" prefWidth="146.0" style="-fx-padding: 10px;" text="" textFill="WHITE" underline="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                      <font>
+                        <Font size="20.0" fx:id="x1" />
+                      </font>
+                    </Label>
+                  </children>
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                </GridPane>
+                <Label fx:id="closeLabel" font="$x1" layoutX="9.0" layoutY="9.0" onMouseClicked="#closeStage" prefHeight="52.0" prefWidth="213.0" style="-fx-padding: 10px;" text="退出系统" textFill="WHITE" underline="true" />
+              </children>
+            </AnchorPane>
+            <AnchorPane id="anchorPane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+              <children>
+                <SplitPane id="splitPaneVertical1" dividerPositions="0.5015243902439024" focusTraversable="true" orientation="VERTICAL" prefHeight="598.0" prefWidth="595.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <items>
+                    <AnchorPane id="anchorPane3" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <children>
+                        <HBox layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="66.0">
+                          <children>
+                            <Label id="tNumCol" prefHeight="32.0" prefWidth="70.0" text="商品号" textAlignment="LEFT">
+                              <font>
+                                <Font name="System Bold" size="18.0" fx:id="x2" />
+                              </font>
+                            </Label>
+                          </children>
+                        </HBox>
+                        <HBox layoutX="493.0" layoutY="16.0" minHeight="22.0" prefHeight="22.0" prefWidth="108.0">
+                          <children>
+                            <Label id="productionDateCol" font="$x2" prefHeight="32.0" prefWidth="131.0" text="生产日期" textAlignment="LEFT" />
+                          </children>
+                        </HBox>
+                        <HBox layoutX="242.0" layoutY="14.0" prefHeight="32.0" prefWidth="52.0">
+                          <children>
+                            <Label id="priceCol" font="$x2" prefHeight="32.0" prefWidth="70.0" text="价格" textAlignment="LEFT" />
+                          </children>
+                        </HBox>
+                        <HBox layoutX="348.0" layoutY="13.0" prefHeight="31.0" prefWidth="65.0">
+                          <children>
+                            <Label id="costCol" font="$x2" prefHeight="32.0" prefWidth="70.0" text="成本" textAlignment="LEFT" />
+                          </children>
+                        </HBox>
+                        <HBox layoutX="120.0" layoutY="14.0" prefHeight="32.0" prefWidth="92.0">
+                          <children>
+                            <Label id="tNameCol" font="$x2" prefHeight="32.0" prefWidth="66.0" text="商品名" textAlignment="LEFT" />
+                          </children>
+                        </HBox>
+                        <Line endX="524.0" endY="-2.0" layoutX="115.0" layoutY="47.0" startX="-123.0" startY="0.0" />
+                        <Line endX="-127.0" endY="204.0" layoutX="217.0" layoutY="146.0" startX="-129.0" startY="-145.0" />
+                        <Line endX="-127.0" endY="204.0" layoutX="338.0" layoutY="146.0" startX="-129.0" startY="-145.0" />
+                        <Line endX="-127.0" endY="204.0" layoutX="444.0" layoutY="146.0" startX="-129.0" startY="-145.0" />
+                        <Line endX="-32.0" endY="206.0" layoutX="454.0" layoutY="156.0" startX="-36.0" startY="-166.0" />
+                        <Label fx:id="tNumCol" layoutX="2.0" layoutY="61.0" prefHeight="32.0" prefWidth="83.0" text="">
+                          <font>
+                            <Font size="16.0" fx:id="x3" />
+                          </font>
+                        </Label>
+                        <Label fx:id="tNameCol" font="$x3" layoutX="98.0" layoutY="61.0" prefHeight="32.0" prefWidth="92.0" text="" />
+                        <Label fx:id="priceCol" font="$x3" layoutX="226.0" layoutY="61.0" prefHeight="32.0" prefWidth="72.0" text="" />
+                        <Label fx:id="costCol" font="$x3" layoutX="338.0" layoutY="61.0" prefHeight="32.0" prefWidth="59.0" text="" />
+                        <Label fx:id="productionDateCol" font="$x3" layoutX="454.0" layoutY="61.0" prefHeight="32.0" prefWidth="146.0" text="" />
+                      </children>
+                    </AnchorPane>
+                    <AnchorPane id="anchorPane4" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                      <children>
+                        <HBox id="HBox" alignment="CENTER" layoutY="15.0" prefHeight="25.0" prefWidth="200.0" spacing="5.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="415.0">
+                          <children>
+                            <Label id="label4" minWidth="-Infinity" text="商品号（必填）" />
+                            <TextField id="textField1" fx:id="tNum" editable="true" onAction="#cashierInsert" prefHeight="24.0" prefWidth="146.0" text="" HBox.hgrow="ALWAYS" />
+                          </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER" layoutX="20.0" layoutY="51.0" prefHeight="24.0" prefWidth="227.0" spacing="5.0">
+                          <children>
+                            <Label id="label4" minWidth="-Infinity" text="商品名" />
+                            <TextField id="textField1" fx:id="tName" editable="true" onAction="#cashierInsert" prefHeight="24.0" prefWidth="180.0" text="" HBox.hgrow="ALWAYS" />
+                          </children>
+                        </HBox>
+                        <HBox id="HBox" alignment="CENTER" layoutX="20.0" layoutY="86.0" prefHeight="25.0" prefWidth="146.0" spacing="5.0">
+                          <children>
+                            <Label id="label4" minWidth="-Infinity" prefHeight="21.9998779296875" text="数量（必填）" />
+                            <TextField id="textField1" fx:id="saleNum" editable="true" prefHeight="25.0" prefWidth="54.0" text="" HBox.hgrow="ALWAYS" />
+                          </children>
+                        </HBox>
+                        <Button fx:id="confirmBtn" layoutX="495.0" layoutY="99.0" mnemonicParsing="false" onMouseClicked="#cashierInsert" prefHeight="33.0" prefWidth="106.0" text="确认录入" />
+                        <SplitPane dividerPositions="0.7" focusTraversable="true" layoutX="0.0" layoutY="151.0" orientation="VERTICAL" prefHeight="12.0" prefWidth="637.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="16.0" prefWidth="637.0" />
+                          </items>
+                        </SplitPane>
+                        <Label layoutX="18.0" layoutY="174.0" text="操作结果" />
+                        <Label fx:id="cashierResultArea" layoutX="34.0" layoutY="201.0" prefHeight="54.0" prefWidth="512.0" style="" text="" textFill="#cc0000">
+                          <font>
+                            <Font name="System Bold" size="28.0" fx:id="x4" />
+                          </font>
+                        </Label>
+                      </children>
+                    </AnchorPane>
+                  </items>
+                </SplitPane>
+              </children>
+            </AnchorPane>
+          </items>
+        </SplitPane>
+        <Label alignment="TOP_LEFT" contentDisplay="LEFT" font="$x4" layoutX="0.0" layoutY="-1.0" minHeight="51.0" prefHeight="67.0" prefWidth="880.0" style="-fx-padding: 14px 14px 14px 14px;&#10;-fx-background-color:grey;" text="收银员功能" textAlignment="LEFT" textFill="#202020" textOverrun="ELLIPSIS" underline="false" wrapText="false" />
+        <HBox id="HBox" alignment="CENTER" layoutX="422.0" layoutY="12.0" prefHeight="54.0" prefWidth="446.0" spacing="5.0">
+          <children>
+            <Label id="label4" font="$x3" minWidth="-Infinity" prefHeight="32.0" prefWidth="92.0" text="商品号 / 名" textFill="WHITE" />
+            <TextField id="textField1" fx:id="searchKey" editable="true" onAction="#cashierSearch" prefHeight="22.0" prefWidth="121.0" text="" HBox.hgrow="ALWAYS" />
+            <Button fx:id="searchBtn" minHeight="22.0" mnemonicParsing="false" onMouseClicked="#cashierSearch" prefHeight="22.0" prefWidth="110.0" style="" text="查询" textFill="BLACK" />
+          </children>
+        </HBox>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
