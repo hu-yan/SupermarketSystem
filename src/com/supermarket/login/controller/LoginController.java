@@ -54,9 +54,12 @@ public class LoginController {
 
         ResultSet loginResult = ServerManipulation.execQuery(queryBuffer.toString());
 
+        position = "NUS";
         while (!loginResult.next()){
-            error.setText("错误的密码或用户名");
-            break;
+            if(position.equals("NUS")){
+                error.setText("错误的用户名或密码");
+                break;
+            }
         }
 
         while (loginResult.next()) {

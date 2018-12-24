@@ -70,7 +70,7 @@ public class WarehouseController {
     private TableColumn  Tname;
 
     @FXML
-    private TableColumn  Tsum;
+    private TableColumn  stcok;
 
     @FXML
     private TableColumn  indate1;
@@ -87,11 +87,11 @@ public class WarehouseController {
         String key = searchKey.getText();
         if(key.startsWith("0")){
             String searchByNo = "Tnum";
-            queryBuffer.append("SELECT * FROM warehouse WHERE ").append(searchByNo).append(" LIKE'").append(searchKey.getText()).append("%'");
+            queryBuffer.append("SELECT * FROM warehouse WHERE ").append(searchByNo).append("='").append(searchKey.getText()).append("'");
             System.out.println(queryBuffer.toString());
         }else{
             String searchByName = "Tname";
-            queryBuffer.append("SELECT * FROM warehouse WHERE ").append(searchByName).append(" LIKE'").append(searchKey.getText()).append("%'");
+            queryBuffer.append("SELECT * FROM warehouse WHERE ").append(searchByName).append(" LIKE'%").append(searchKey.getText()).append("%'");
             System.out.println(queryBuffer.toString());
         }
         ResultSet queryResult = ServerManipulation.execQuery(queryBuffer.toString());
@@ -105,7 +105,7 @@ public class WarehouseController {
     private void updateTableValue(ResultSet rs) throws SQLException {
         Num.setText(rs.getString("Tnum").trim());
         Name.setText(rs.getString("Tname").trim());
-        Sum.setText(((String) rs.getString("TSum")).trim());
+        Sum.setText(((String) rs.getString("stock")).trim());
         Date1.setText(((String) rs.getString("indate")).trim());
         Date2.setText(((String) rs.getString("outdate")).trim());
 
@@ -148,7 +148,7 @@ public class WarehouseController {
     protected void Update() throws SQLException {
         String Sum = UpdateSum.getText();
         String Num=UpdateNum.getText();
-        queryBuffer.append("Update warehouse set Tsum=").append("'").append(Sum).append("'").append("where Tnum='").append(Num).append("'");
+        queryBuffer.append("Update warehouse set stcok=").append("'").append(Sum).append("'").append("where Tnum='").append(Num).append("'");
         System.out.println(queryBuffer.toString());
         ServerManipulation.nonRsExecQuery(queryBuffer.toString());
         rResultArea.setText("修改成功");
