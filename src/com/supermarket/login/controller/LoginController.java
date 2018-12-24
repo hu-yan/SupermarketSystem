@@ -55,16 +55,21 @@ public class LoginController {
         ResultSet loginResult = ServerManipulation.execQuery(queryBuffer.toString());
 
         position = "NUS";
-        while (!loginResult.next()){
-            if(position.equals("NUS")){
-                error.setText("错误的用户名或密码");
-                break;
-            }
+//        while (!loginResult.next()){
+
+//        }
+        while (loginResult.next()) {
+            position = loginResult.getString("position").trim();
+        }
+        if(position.equals("NUS")){
+            error.setText("错误的用户名或密码");
         }
 
-        while (loginResult.next()) {
-            pwdChecker = loginResult.getString("password").trim().equals(userPwd);
-            position = loginResult.getString("position").trim();
+        ResultSet loginResult2 = ServerManipulation.execQuery(queryBuffer.toString());
+
+        while (loginResult2.next()) {
+            pwdChecker = loginResult2.getString("password").trim().equals(userPwd);
+            position = loginResult2.getString("position").trim();
             if (pwdChecker){
                 switch (position){
                     case "cashier":
@@ -76,7 +81,9 @@ public class LoginController {
                         FXUtil.jumpToNewWindow(workID, warehouseLoader, "仓库管理", 725, 880);
                         break;
                     case "manager":
-                        //TODO
+                        FXMLLoader managerLoader= new FXMLLoader(getClass().getResource("/com/supermarket/manager/view/ManagerView.fxml"));
+                        FXUtil.jumpToNewWindow(workID, managerLoader, "经理", 725, 880);
+                        break;
                     case "admin":
                         //TODO
                     default:
