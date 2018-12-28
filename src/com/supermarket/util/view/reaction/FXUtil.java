@@ -3,6 +3,7 @@ package com.supermarket.util.view.reaction;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -39,6 +40,14 @@ public class FXUtil {
         FXUtil.createWindow(componentStage, componentName, root, height, width);
         componentStage.show();
         Stage stage = (Stage) closeLabel.getScene().getWindow();
+        stage.close();
+    }
+    public static void jumpToNewWindow(Label exitLabel, FXMLLoader loader, String componentName, int height, int width) throws IOException {
+        Stage componentStage= new Stage();
+        Parent root = loader.load();
+        FXUtil.createWindow(componentStage, componentName, root, height, width);
+        componentStage.show();
+        Stage stage = (Stage) exitLabel.getScene().getWindow();
         stage.close();
     }
 }

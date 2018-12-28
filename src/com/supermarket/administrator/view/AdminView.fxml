@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="725.0" prefWidth="880.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.supermarket.administrator.controller.AdminController">
+  <children>
+    <SplitPane id="splitPaneHorizontal1" dividerPositions="0.27045454545454545" focusTraversable="true" layoutX="-1.0" layoutY="66.0" prefHeight="660.0" prefWidth="882.0">
+      <items>
+        <AnchorPane id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <HBox layoutX="0.0" layoutY="0.0" prefHeight="667.0" prefWidth="237.0" style="-fx-background-color:  #333333&#10;" />
+            <GridPane id="GridPane" layoutX="-1.0" layoutY="-1.0" prefHeight="645.0" prefWidth="238.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Label id="close" fx:id="closeLabel" layoutX="9.0" layoutY="9.0" onMouseClicked="#closeStage" prefHeight="52.0" prefWidth="213.0" style="-fx-padding: 10px;" text="退出系统" textFill="WHITE" underline="true">
+              <font>
+                <Font size="20.0" fx:id="x1" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane id="anchorPane2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <SplitPane id="splitPaneVertical1" dividerPositions="0.3567073170731707" focusTraversable="true" orientation="VERTICAL" prefHeight="598.0" prefWidth="595.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane id="anchorPane3" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                  <children>
+                    <HBox layoutX="17.0" layoutY="13.0" prefHeight="24.0" prefWidth="59.0">
+                      <children>
+                        <Label id="tNumCol" prefHeight="32.0" prefWidth="70.0" text="员工号" textAlignment="LEFT">
+                          <font>
+                            <Font name="System Bold" size="18.0" fx:id="x2" />
+                          </font>
+                        </Label>
+                      </children>
+                    </HBox>
+                    <HBox layoutX="434.0" layoutY="13.0" minHeight="20.0" prefHeight="20.0" prefWidth="72.0">
+                      <children>
+                        <Label id="productionDateCol" font="$x2" minHeight="20.0" prefHeight="20.0" prefWidth="83.0" text="联系电话" textAlignment="LEFT" />
+                      </children>
+                    </HBox>
+                    <HBox layoutX="191.0" layoutY="13.0" prefHeight="24.999908447265625" prefWidth="43.0">
+                      <children>
+                        <Label id="priceCol" font="$x2" prefHeight="31.0" prefWidth="52.000099999997474" text="性 别" textAlignment="LEFT" />
+                      </children>
+                    </HBox>
+                    <HBox layoutX="298.0" layoutY="10.0" prefHeight="31.0" prefWidth="65.0">
+                      <children>
+                        <Label id="costCol" font="$x2" prefHeight="32.0" prefWidth="70.0" text="地    址" textAlignment="LEFT" />
+                      </children>
+                    </HBox>
+                    <HBox layoutX="120.0" layoutY="14.0" prefHeight="25.0" prefWidth="65.0">
+                      <children>
+                        <Label id="tNameCol" font="$x2" prefHeight="30.0" prefWidth="88.29290771484375" text="姓名" textAlignment="LEFT" />
+                      </children>
+                    </HBox>
+                    <Line endX="524.0" endY="-2.0" layoutX="115.0" layoutY="47.0" startX="-123.0" startY="0.0" />
+                    <Line endX="-127.0" endY="204.0" layoutX="231.0" layoutY="145.0" startX="-129.0" startY="-145.0" />
+                    <Line endX="-127.0" endY="204.0" layoutX="312.0" layoutY="146.0" startX="-129.0" startY="-145.0" />
+                    <Line endX="-127.0" endY="204.0" layoutX="371.0" layoutY="146.0" startX="-129.0" startY="-145.0" />
+                    <Line endX="-32.0" endY="206.0" layoutX="454.0" layoutY="156.0" startX="-36.0" startY="-166.0" />
+                    <Label id="tNumCol" fx:id="sNumCol" layoutX="9.0" layoutY="60.0" prefHeight="24.0" prefWidth="83.00009999999747" text="">
+                      <font>
+                        <Font size="16.0" fx:id="x3" />
+                      </font>
+                    </Label>
+                    <Label id="tNameCol" fx:id="sNameCol" font="$x3" layoutX="110.0" layoutY="60.0" prefHeight="24.0" prefWidth="65.0" text="" />
+                    <Label id="priceCol" fx:id="SexCol" font="$x3" layoutX="187.0" layoutY="61.0" prefHeight="24.0" prefWidth="52.0" text="" />
+                    <Label id="costCol" fx:id="positionCol" font="$x3" layoutX="260.0" layoutY="57.0" prefHeight="31.0" prefWidth="143.0" text="" />
+                    <Label id="productionDateCol" fx:id="telephoneCol" font="$x3" layoutX="432.0" layoutY="57.0" prefHeight="25.0" prefWidth="83.0" text="" />
+                    <Line endX="-32.0" endY="206.0" layoutX="562.0" layoutY="166.0" startX="-36.0" startY="-166.0" />
+                    <Label id="costCol" font="$x2" layoutX="551.0" layoutY="7.0" prefHeight="32.0" prefWidth="70.0" text="密     码" textAlignment="LEFT" />
+                    <Label id="productionDateCol" fx:id="passwordCol" font="$x3" layoutX="540.0" layoutY="57.0" prefHeight="25.0" prefWidth="83.0" text="" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane id="anchorPane4" minHeight="0.0" minWidth="0.0" prefHeight="390.0" prefWidth="636.0">
+                  <children>
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="75.0" prefHeight="25.0" prefWidth="238.00009999999747" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefWidth="59.9998779296875" text="性别" />
+                        <TextField id="textField1" fx:id="sSex" editable="true" prefHeight="20.000099999997474" prefWidth="181.0" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <Button id="confirmBtn" fx:id="Deletebtn" layoutX="483.0" layoutY="184.0" mnemonicParsing="false" onAction="#adminDelete" prefHeight="33.0" prefWidth="106.0" text="删除数据" />
+                    <SplitPane dividerPositions="0.5" focusTraversable="true" layoutY="218.0" orientation="VERTICAL" prefHeight="3.0" prefWidth="637.0">
+                      <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="635.0" />
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="16.0" prefWidth="637.0" />
+                      </items>
+                    </SplitPane>
+                    <Label layoutX="16.0" layoutY="240.0" text="操作结果" />
+                    <Label id="cashierResultArea" fx:id="adminResultArea" layoutX="14.0" layoutY="267.0" prefHeight="74.0" prefWidth="356.0" style="" text="" textFill="#cc0000">
+                      <font>
+                        <Font name="System Bold" size="28.0" fx:id="x4" />
+                      </font>
+                    </Label>
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="5.0" prefHeight="23.9998779296875" prefWidth="238.0" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefWidth="59.9998779296875" text="员工号" />
+                        <TextField id="textField1" fx:id="sNum" editable="true" prefHeight="23.9998779296875" prefWidth="170.00009999999747" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="41.0" prefHeight="23.9998779296875" prefWidth="238.0" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefHeight="21.0" prefWidth="60.000099999997474" text="姓名" />
+                        <TextField id="textField1" fx:id="sName" editable="true" prefHeight="23.9998779296875" prefWidth="168.0" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="110.0" prefHeight="24.0" prefWidth="239.0" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefWidth="60.0" text="地址" />
+                        <TextField id="textField1" fx:id="Sposition" editable="true" prefHeight="20.000099999997474" prefWidth="172.0" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <Button id="confirmBtn" fx:id="adminupdatebtn" layoutX="483.0" layoutY="131.0" mnemonicParsing="false" onAction="#adminUpdate" prefHeight="33.0" prefWidth="106.0" text="修改数据" />
+                    <Button id="confirmBtn" fx:id="adminInsertbtn" layoutX="483.0" layoutY="74.0" mnemonicParsing="false" onAction="#adminInsert" prefHeight="33.0" prefWidth="106.0" text="确认录入" />
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="146.0" prefHeight="21.9998779296875" prefWidth="237.9998779296875" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefHeight="22.0" prefWidth="60.0" text="联系电话" />
+                        <TextField id="textField1" fx:id="Stelephone" editable="true" prefHeight="22.000099999997474" prefWidth="169.0" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <HBox id="HBox" alignment="CENTER" layoutX="16.0" layoutY="183.0" prefHeight="24.9998779296875" prefWidth="237.9998779296875" spacing="5.0">
+                      <children>
+                        <Label id="label4" minWidth="-Infinity" prefWidth="60.0" text="密码" />
+                        <TextField id="textField1" fx:id="Spassword" editable="true" prefHeight="23.9998779296875" prefWidth="168.0" text="" HBox.hgrow="ALWAYS" />
+                      </children>
+                    </HBox>
+                    <Label layoutX="269.0" layoutY="10.0" text="*" />
+                    <Label layoutX="269.0" layoutY="43.0" text="*" />
+                    <Label layoutX="269.0" layoutY="112.0" text="*" />
+                    <Label layoutX="269.0" layoutY="147.0" text="*" />
+                    <Label layoutX="269.0" layoutY="186.0" text="*" />
+                    <Label layoutX="269.0" layoutY="78.0" text="（男为1，女为0）" />
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <Label alignment="TOP_LEFT" contentDisplay="LEFT" font="$x4" layoutX="-1.0" layoutY="0.0" minHeight="51.0" prefHeight="67.0" prefWidth="882.0" style="-fx-padding: 14px 14px 14px 14px;&#10;-fx-background-color:grey;" text="管理员功能" textAlignment="LEFT" textFill="#202020" textOverrun="ELLIPSIS" underline="false" wrapText="false" />
+    <HBox id="HBox" alignment="CENTER" layoutX="421.0" layoutY="13.0" prefHeight="54.0" prefWidth="446.0" spacing="5.0">
+      <children>
+        <Label id="label4" font="$x3" minWidth="-Infinity" prefHeight="32.0" prefWidth="92.0" text="商品号 / 名" textFill="WHITE" />
+        <TextField id="textField1" fx:id="adminsearchKey" editable="true" prefHeight="33.0" prefWidth="234.0" promptText="请输入员工号或者姓名" text="" HBox.hgrow="ALWAYS" />
+        <Button id="searchBtn" fx:id="adminsearchbtn" font="$x3" minHeight="22.0" mnemonicParsing="false" onAction="#adminSearch" prefHeight="33.0" prefWidth="110.0" style="" text="查询" textFill="BLACK" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>

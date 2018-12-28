@@ -22,21 +22,22 @@
           <items>
             <AnchorPane disable="false" focusTraversable="false" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="645.0" prefWidth="361.0" style="-fx-background-color:  #333333&#10;">
               <children>
-                <Label layoutX="25.0" layoutY="227.0" prefHeight="67.0" prefWidth="247.0" text="请选择需要使用的功能" textFill="WHITE">
+                <Label layoutX="25.0" layoutY="101.0" prefHeight="67.0" prefWidth="247.0" text="请选择需要使用的功能" textFill="WHITE">
                   <font>
                     <Font size="20.0" fx:id="x1" />
                   </font>
                 </Label>
+                <Label fx:id="exit" font="$x1" layoutX="90.0" layoutY="289.0" onMouseClicked="#closeStage" prefHeight="67.0" prefWidth="117.0" text="退出系统" textFill="WHITE" />
               </children>
             </AnchorPane>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="645.0" prefWidth="788.0">
               <children>
                 <GridPane layoutX="0.0" layoutY="14.0" prefHeight="647.0" prefWidth="590.0">
                   <children>
-                    <Button id="toStaff" alignment="CENTER" contentDisplay="BOTTOM" font="$x1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#toStaff" prefHeight="237.0" prefWidth="295.0" text="员工信息查询" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                    <Button id="toWarehouse" font="$x1" mnemonicParsing="false" prefHeight="237.0" prefWidth="295.0" text="仓库信息查询" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                    <Button id="toSell" font="$x1" mnemonicParsing="false" prefHeight="237.0" prefWidth="295.0" text="销售信息查询" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                    <Button id="toThings" font="$x1" mnemonicParsing="false" prefHeight="237.0" prefWidth="295.0" text="商品管理" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <Button id="toStaff" alignment="CENTER" contentDisplay="BOTTOM" font="$x1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#toStaff" prefHeight="237.0" prefWidth="295.0" text="员工信息管理" textAlignment="LEFT" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <Button id="toWarehouse" font="$x1" mnemonicParsing="false" onMouseClicked="#toWarehouse" prefHeight="237.0" prefWidth="295.0" text="仓库信息管理" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                    <Button id="toSell" font="$x1" mnemonicParsing="false" onMouseClicked="#toSell" prefHeight="237.0" prefWidth="295.0" text="销售信息管理" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <Button id="toThings" font="$x1" mnemonicParsing="false" onMouseClicked="#toThing" prefHeight="237.0" prefWidth="295.0" text="商品信息管理" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   </children>
                   <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -51,7 +52,6 @@
             </AnchorPane>
           </items>
         </SplitPane>
-        <Button id="maExit" layoutX="748.0" layoutY="14.0" mnemonicParsing="false" prefHeight="49.000099182128906" prefWidth="118.0" text="退出系统" />
       </children>
     </AnchorPane>
   </children>

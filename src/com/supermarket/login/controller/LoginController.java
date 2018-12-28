@@ -85,7 +85,9 @@ public class LoginController {
                         FXUtil.jumpToNewWindow(workID, managerLoader, "经理", 725, 880);
                         break;
                     case "admin":
-                        //TODO
+                        FXMLLoader adminLoader= new FXMLLoader(getClass().getResource("/com/supermarket/administrator/view/AdminView.fxml"));
+                        FXUtil.jumpToNewWindow(workID, adminLoader, "管理员", 725, 880);
+                        break;
                     default:
                         break;
                 }
